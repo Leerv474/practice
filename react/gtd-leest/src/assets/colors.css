@@ -1,0 +1,13 @@
+:root {
+  --main: #138ede;
+  --secondary-yellow: #fee566;
+  --secondary-purple: #a866fe;
+  --secondary-red: #fe8a66;
+  --secondary-green: #8efe66;
+
+  --base10: #5cc4e5;
+  --base30: #4799b2;
+  --base60: #295766;
+  --base80: #142c33;
+  --text: #fff;
+}

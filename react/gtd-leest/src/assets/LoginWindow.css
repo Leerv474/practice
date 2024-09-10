@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.outer-space {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.outer-space.active {
+  display: flex;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-justify: center;
+  text-align: center;
+  z-index: 0;
+}
+
+.window {
+  width: 600px;
+  height: 500px;
+  border: 2px solid #083959;
+  border-radius: 15px;
+  background: linear-gradient(to right, var(--main), #13a2de);
+  z-index: 1;
+}
+
+.window .switch-menu {
+  background: #0d639b;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  position: relative;
+}
+
+.window .switch-menu .login-option,
+.window .switch-menu .register-option {
+  text-align: center;
+  align-content: center;
+  font-size: 14pt;
+  color: white;
+  font-weight: bold;
+  height: 45px;
+  z-index: 2;
+  margin: 0 5px;
+}
+
+.window .switch-menu .login-option:hover,
+.window .switch-menu .register-option:hover {
+  text-shadow: 2px 2px 4px #042134; /* Adding shadow */
+  cursor: pointer;
+}
+
+.window .switch-menu .selection-box {
+  grid-row: 1;
+  grid-column: 1;
+  background: #13a2de;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 45px;
+  border-radius: 10px;
+  float: right;
+  position: absolute;
+  margin-right: 5px;
+  transition: all 0.4s;
+}
+
+.window .switch-menu .selection-box.login-active {
+  left: 0;
+  right: 50%;
+}
+
+.window .switch-menu .selection-box.register-active {
+  left: 50%;
+  right: 0;
+}
+
+.window .login-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+}
+.window .register-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px;
+}
+
+.window .login-menu p,
+.window .register-menu p {
+  color: white;
+  font-size: 14pt;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.window .login-menu input,
+.window .register-menu input {
+  font-size: 14pt;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.window .login-menu .login-button,
+.window .register-menu .register-button {
+  font-size: 20pt;
+  color: white;
+  background: #0d639b;
+  border-radius: 20px;
+  text-align: center;
+  text-justify: center;
+  padding: 5px;
+  padding-top: 10px;
+  width: 200px;
+  margin: auto;
+  margin-top: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.window .register-menu .register-button {
+  margin-top: 30px;
+}
+
+.window .login-menu .login-button:hover,
+.window .register-menu .register-button:hover {
+  background: #fff;
+  color: #0d639b;
+}
+
+

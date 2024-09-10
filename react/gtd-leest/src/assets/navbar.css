@@ -1,0 +1,58 @@
+@import url("./colors.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background: linear-gradient(to right, var(--main), #13a2de);
+  border-bottom: 2px solid var(--base60);
+  padding: 0 30px 0 30px;
+}
+
+nav p {
+  font-weight: bold;
+  font-size: 16pt;
+  color: var(--text);
+}
+
+nav div {
+  display: flex;
+  font-size: 14pt;
+  font-weight: bold;
+  color: var(--text);
+  align-items: center;
+}
+
+nav .logIn-button {
+  background: #71bbeb;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px 5px 20px;
+}
+
+nav div:hover {
+  cursor: pointer;
+}
+
+nav .toggleTables-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  gap: 10px;
+}
+
+nav .toggleTables-button p {
+  padding-top: 10px;
+  text-align: center;
+}
+
+nav .toggleTables-button img {
+  width: 50px;
+}
