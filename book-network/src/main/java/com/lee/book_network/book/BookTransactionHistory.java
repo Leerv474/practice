@@ -4,12 +4,11 @@ import com.fasterxml.jackson.databind.ser.Serializers;
 import com.lee.book_network.common.BaseEntity;
 import com.lee.book_network.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
