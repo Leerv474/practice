@@ -1,0 +1,23 @@
+services:
+  postgres:
+    container_name: postgres-security-prac
+    image: postgres
+    environment:
+      POSTGRES_USER: study
+      POSTGRES_PASSWORD: 1234
+      PG_DATA: /var/lib/postgresql/data
+      POSTGRES_DB: security_practice
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - 5432:5432
+    networks:
+      - spring-demo
+    restart: unless-stopped
+
+networks:
+  spring-demo:
+    driver: bridge
+volumes:
+  postgres:
+    driver: local
